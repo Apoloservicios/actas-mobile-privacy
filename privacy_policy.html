@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - ActasMobile</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #3b82f6;
+                --primary-dark: #60a5fa;
+                --bg: #0f172a;
+                --card-bg: #1e293b;
+                --text: #f8fafc;
+                --text-muted: #94a3b8;
+                --border: #334155;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .update-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p, ul {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background-color: rgba(37, 99, 235, 0.08);
+            border-left: 4px solid var(--primary);
+            padding: 14px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-badge">📋 ActasMobile</div>
+        <h1>Política de Privacidad</h1>
+        <p class="update-date">Última actualización: Septiembre de 2026</p>
+    </header>
+
+    <div class="card">
+        <h2>1. Introducción</h2>
+        <p>En <strong>ActasMobile</strong> priorizamos la confidencialidad, la seguridad y el control total de los datos de nuestros usuarios. Esta política de privacidad describe cómo se gestiona la información en la aplicación móvil de gestión y digitalización de actas reglamentarias.</p>
+        
+        <div class="highlight-box">
+            <strong>Privacidad por Diseño (Local-First):</strong> ActasMobile opera de forma totalmente local en su dispositivo. No vendemos, comerciamos ni transmitimos sus datos a servidores de terceros de manera oculta o automatizada.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. Información que recopila la aplicación</h2>
+        <p>ActasMobile recopila y almacena únicamente la información necesaria para la creación, firma y exportación de actas oficiales:</p>
+        <ul>
+            <li><strong>Datos de Actas e Inspectores:</strong> Nombre, DNI, firmas digitales, ubicaciones de constatación, números de actas y textos de inspección ingresados por el usuario.</li>
+            <li><strong>Fotografías e Imágenes:</strong> Capturas fotográficas adjuntas a los formularios y el logo institucional cargado en el membrete.</li>
+            <li><strong>Archivos Locales:</strong> Archivos PDF generados y copias de seguridad de configuración en formato JSON.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>3. Uso de Permisos del Dispositivo</h2>
+        <p>La aplicación solicita permisos mínimos para cumplir con sus funciones operativas:</p>
+        <ul>
+            <li><strong>Cámara (<code>android.permission.CAMERA</code>):</strong> Utilizado exclusivamente cuando el usuario decide capturar fotos dentro de un formulario para adjuntarlas al acta. La cámara no se activa en segundo plano.</li>
+            <li><strong>Internet (<code>android.permission.INTERNET</code>):</strong> Utilizado únicamente cuando el usuario activa voluntariamente la sincronización mediante Webhook hacia su cuenta privada de <strong>Microsoft SharePoint</strong> o <strong>Google Sheets</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>4. Almacenamiento y Protección de Datos</h2>
+        <p>Todos los registros, borradores, actas generadas y firmas digitales se almacenan en la base de datos local encriptada de la aplicación (SQLite / Room) en el almacenamiento privado del dispositivo.</p>
+        <p>El usuario mantiene la propiedad exclusiva de su información. El usuario puede realizar copias de seguridad mediante la función de exportación JSON o eliminar toda la información desinstalando la aplicación.</p>
+    </div>
+
+    <div class="card">
+        <h2>5. Integraciones de Terceros (SharePoint / Google Sheets)</h2>
+        <p>ActasMobile ofrece la opción de conectar plantillas de actas a endpoints webhook de SharePoint o Google Sheets configurados por el propio usuario o su entidad. Los datos transmitidos mediante estas funciones son enviados directamente desde el dispositivo del usuario a la URL provista por el usuario, sin intermediarios.</p>
+    </div>
+
+    <div class="card">
+        <h2>6. Menores de Edad</h2>
+        <p>Nuestra aplicación no está dirigida a menores de 13 años y está diseñada estrictamente para uso corporativo, operativo e inspectivo laboral.</p>
+    </div>
+
+    <div class="card">
+        <h2>7. Contacto</h2>
+        <p>Si tiene preguntas sobre esta política de privacidad o sobre el manejo de sus datos en ActasMobile, puede ponerse en contacto a través de:</p>
+        <p><strong>Correo electrónico de soporte:</strong> soporte@actasmobile.com</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ActasMobile - Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+</body>
+</html>
